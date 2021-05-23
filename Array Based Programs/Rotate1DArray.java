@@ -22,6 +22,10 @@ class Rotate1DArray {
 
   public static void rotate(int[] arr, int r){
     r = r % arr.length;
+    // if rotation is negative
+    if(r < 0){
+      r = r + arr.length;
+    }
     //rotate the first half
     reverse(arr, 0, arr.length -1 -r);
     //rotate the second half
